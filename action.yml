@@ -1,0 +1,15 @@
+name: 'actions-jsons-to-csv'
+description: ''
+inputs:
+  directory:
+    description: ''
+    required: true
+  output_filename:
+    description: ''
+    required: true
+  mapping:
+    description: ''
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
