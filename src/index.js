@@ -7,7 +7,13 @@ async function run() {
   const outputFilename = core.getInput('output_filename')
   const mapping = JSON.parse(core.getInput('mapping'))
 
-  jsonsToCsv.write(path.resolve(targetDirectory), mapping, path.resolve(outputFilename))
+  const targetDirectoryFullPath = path.resolve(targetDirectory)
+  const outputFilenameFullpath = path.resolve(outputFilename)
+
+  console.log('targetDirectory: ', targetDirectoryFullPath)
+  console.log('outputFilename: ', outputFilenameFullpath)
+
+  jsonsToCsv.write(targetDirectoryFullPath, mapping, outputFilenameFullpath)
 }
 
 run();
