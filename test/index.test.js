@@ -3,13 +3,13 @@ const fs = require('fs')
 const path = require('path')
 
 const expectedValues = 
-`A,B,E
-1,2,4
-Z,Y,W
+`A,B,E,F,G
+1,2,4,2,
+Z,Y,W,b,301
 `
 const outputFileName = path.resolve('test/files/output.csv')
 const targetDir = path.resolve('test/files')
-const mapping = [["a", "A"], ["b", "B"],  ["c.e", "E"]]
+const mapping = [["a", "A"], ["b", "B"],  ["c.e", "E"], ["f[1].A", "F"], ["g[2]", "G"]]
 
 describe('collect', () => {
   test('Should output comma-separated values', () => {
