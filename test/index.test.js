@@ -5,7 +5,8 @@ const path = require('path')
 const expectedValues = 
 `A,B,E,F,G
 1,2,4,2,
-Z,Y,W,b,301
+Z,,W,b,301
+,,,,
 `
 const outputFileName = path.resolve('test/files/output.csv')
 const targetDir = path.resolve('test/files')
